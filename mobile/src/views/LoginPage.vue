@@ -38,7 +38,8 @@ const login = async () => {
     await authService.login({ email: email.value, password: password.value });
     router.push('/peliculas');
   } catch (error) {
-    alert('Credenciales incorrectas. Intenta de nuevo.');
+    const msg = (error && error.response && error.response.data && error.response.data.message) || (error && error.message) || 'Error desconocido';
+    alert('Error al iniciar sesión: ' + msg);
   }
 };
 

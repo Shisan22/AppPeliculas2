@@ -39,7 +39,8 @@ const register = async () => {
     alert('Registro exitoso. Inicia sesión.');
     router.push('/login');
   } catch (error) {
-    alert('Error al registrarse. Verifica los datos.');
+    const msg = (error && error.response && error.response.data && error.response.data.message) || (error && error.message) || 'Error desconocido';
+    alert('Error al registrarse: ' + msg);
   }
 };
 

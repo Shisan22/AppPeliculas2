@@ -36,8 +36,8 @@ mobile/www/
 
 # ─── Ionic & Capacitor ─────────────────────
 mobile/.ionic/
-mobile/android/
-mobile/ios/
+# mobile/android/ (Se descomenta para subir configuraciones nativas)
+# mobile/ios/
 mobile/platforms/
 mobile/plugins/
 
